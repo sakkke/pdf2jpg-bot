@@ -57,9 +57,11 @@ async def on_message(message):
                             if i % 10 == 0:
                                 print('Sending 10 files to channel...')
                                 await message.channel.send(files=files, silent=True)
+                                print('OK')
                                 files = []
                             elif len(pages) == i:
                                 print(f'Sending {len(files)} file(s) to channel...')
                                 await message.channel.send(files=files, silent=True)
+                                print('OK')
 
 bot.run(os.getenv('TOKEN'))
